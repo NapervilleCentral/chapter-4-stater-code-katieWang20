@@ -18,9 +18,9 @@ public class ch4notes7_08
     
         mathy solver = new mathy();
     
-        System.out.println(solver.abs(-5));
-        System.out.println(abs(-8));
-    
+        System.out.println(solver.abs(-5)); //obj.method()
+        System.out.println(abs(-8) * abs(5.2)); //function (-8 is an argument)
+        System.out.println(-5.555);
     /**/
     }// end of main
     
@@ -29,8 +29,21 @@ public class ch4notes7_08
         @param int value
         @return absoulute value of number
     */
-    public static int abs (int x)
-    {
+   //public or private - where you can view/use
+   //static - dont worry about it
+   //return type - basic data type or object dont put void nobody uses that
+   //name () - this is the method signature
+   public static double abs(double x){ //if name is same, but type or amount is changed, it changes the method 'signature' and the computer will the right one
+
+       if (x<0)                        //this is called overloading. abs is an overloaded method
+           x = -x;
+           
+           return x;
+
+   } 
+   
+   public static int abs (int x) // <--parameter
+       {
         if (x < 0)
             x = -x;
     
