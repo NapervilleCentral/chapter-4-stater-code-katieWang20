@@ -1,24 +1,33 @@
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.lang.Math;
 
 //import javax.swing.*;
 
 public class mathy
 {
-    private int area=0;
+    private double area=0;
 
     /**
         default constructor - stubed in
     */
     public mathy( )
     {
-
-        System.out.println ("hi from default constructor" );
+        area = 0;
+        
+    
 
     }//end of default const
 
+    /**
+     * constructor that sets area
+     * @param int area
+     */
 
-
+    public mathy (int a){
+        area = a;
+        System.out.println ("hi from default constructor (constructor (int))" );
+    }
     /**
         take the absoulute value of the number
         @param int value
@@ -34,12 +43,50 @@ public class mathy
 
     }//end of abs
 
+    /**
+     * add method will return the sum of the two numbers
+     * @ param int x, int y
+     * @ return int sum
+     */ 
+    
+    
+    
+    public int add (int x, int y){
+        
+        return x + y;
+    
+    
+    }
+    
+    public int add(int x, int y, int z){
+    
+        return x + y + z;
+        
+    }
 
+    /**
+     * circleArea calculates that area of a circle
+     * @param int r 
+     * @return double area
+     * 
+     */
+    public double circleArea(int r){
+        
+        area = Math.pow(r, 2) * Math.PI;  
+        return area;
+        
+    }
+    
+    /**
+     * 
+     * getArea
+     * @return the area that has been calculated
+     * 
+     */
 
-
-
-
-
+    public double getArea(){
+        return area;
+    }
 
     /**
         two int parameters and adds them
