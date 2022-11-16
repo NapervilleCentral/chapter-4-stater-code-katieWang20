@@ -22,6 +22,13 @@ public class ch4notes7_08
         
         mathy sovler2 = new mathy (45);
         
+        circle round = new circle(4);
+        
+        double pi = round.PI;//direct access to public data
+       // double r = round.radius;
+        
+        System.out.println(round);
+        
         System.out.println(solver.abs(-5)); //obj.method()
         System.out.println(solver.add(43, 10));
         

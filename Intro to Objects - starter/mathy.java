@@ -71,7 +71,7 @@ public class mathy
      * 
      */
     public double circleArea(int r){
-        
+        // local variable takes precedence
         area = Math.pow(r, 2) * Math.PI;  
         return area;
         
