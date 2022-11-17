@@ -29,12 +29,12 @@ public class ch4notes7_08
         
         System.out.println(round);
         
-        System.out.println(solver.abs(-5)); //obj.method()
-        System.out.println(solver.add(43, 10));
+        //System.out.println(solver.abs(-5)); //obj.method()
+        //System.out.println(solver.add(43, 10));
         
-        System.out.println(solver.circleArea(2));
-        System.out.println(solver.getArea());
-        System.out.println(solver);
+        //System.out.println(solver.circleArea(2));
+        //System.out.println(solver.getArea());
+        //System.out.println(solver);
         // if no toString() method, then it will print  the memory address of the class
         
         /*

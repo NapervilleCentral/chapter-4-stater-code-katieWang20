@@ -18,7 +18,7 @@ public class circle
     /**
     //Default Constructor:
     */
-    public circle ( )
+    public circle ()
     {
         
         radius = 0;
@@ -34,7 +34,9 @@ public class circle
     public circle(double radius)
     {
         this.radius = radius;
+       
         circumference = calcCircumference();
+        
 
     }
      /**
@@ -52,14 +54,19 @@ public class circle
      * 
      */
     
-    public void calcDiameter(){
+    private void calcDiameter(){
         diameter = 2 * radius; 
         
           
     }
     
-    public void getArea(){
-        
+    public double getDiameter(){
+        return diameter;
+    
+    }
+    
+    public double getArea(){
+        return area = PI * radius * radius;
     
     }
     
@@ -74,7 +81,7 @@ public class circle
         String data = "Radius:  "+radius;
         data+="\nCircumference: "+ circumference;
         data +="\nDiameter      "+ diameter;
-        data +="\nArea            "+ area;
+        data +="\nArea          "+ area;
         return data;
         
     }
