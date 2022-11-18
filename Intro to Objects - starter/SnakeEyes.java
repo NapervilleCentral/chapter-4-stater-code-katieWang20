@@ -18,10 +18,19 @@ public class SnakeEyes
       Die die1 = new Die();    // creates a six-sided die
       Die die2 = new Die(20);  // creates a twenty-sided die
       Die die3 = new Die (1);  // creates an invalid die -- so sides are 6
-
+      System.out.println(die1);
+      System.out.println(die2);
+      System.out.println(die3);
+      
       for (int roll = 1; roll <= ROLLS; roll++)
       {
-
+         die1.roll();
+         die2.roll();
+         die3.roll();
+         
+         System.out.println(die1);
+         System.out.println(die2);
+         System.out.println(die3);
          // write correct code to check for snake eyes
 
       }

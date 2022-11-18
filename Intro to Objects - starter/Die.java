@@ -41,14 +41,18 @@ public class Die
    */
   
    public Die(int numFaces){
-       numFaces = numFaces;
-       
+       if (numFaces < MIN_FACES){
+           numFaces = 4;
+       }
+       Random rand = new Random();
+       faceValue = rand.nextInt(numFaces);
    }
+   
    public int roll ()
    {
-       Random rand = new Random();
-       faceValue = 0; // you put the correct  code here
-      faceValue = rand.nextInt(6)-4;
+      Random rand = new Random();
+      //faceValue = 0; // you put the correct  code here
+      faceValue = rand.nextInt(numFaces)+1;
       
       return faceValue;
    }
@@ -59,7 +63,8 @@ public class Die
    */
    public int getFaceValue ()
    {
-      return faceValue;
+       
+       return faceValue;
    }
 
 
@@ -68,7 +73,7 @@ public class Die
         @return _________________
   */
     public int getFaces(){
-        numFaces = setFaces();
+        
         return numFaces;
         
     }
@@ -79,25 +84,22 @@ public class Die
           @param _________________
   */
 
-    private int setFaces(){
-        if (numFaces < 4){
-            numFaces = 4;
-        }
-        
-        return numFaces;
+    public void setFaces(){
+        numFaces = getFaces();
+  
     }
 
    /**
            Returns the current die value and number of sides as a String.
            @return _____________
    */
-   public String methodName ()
+   public String toString ()
    {
       String data ="";
 
       data = "num of faces: " + numFaces;
-      data+= "value of face: " + faceValue;
-
+      data+= "\nvalue of face: " + faceValue;
+      
       return data;
    }
 
