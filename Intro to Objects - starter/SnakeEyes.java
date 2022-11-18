@@ -24,14 +24,23 @@ public class SnakeEyes
       
       for (int roll = 1; roll <= ROLLS; roll++)
       {
-         die1.roll();
-         die2.roll();
-         die3.roll();
+         
+         int roll1, roll2, roll3; 
+         roll1 = die1.roll();
+         roll2 = die2.roll();
+         //roll3 = die3.roll();
          
          System.out.println(die1);
          System.out.println(die2);
          System.out.println(die3);
          // write correct code to check for snake eyes
+         
+         if (roll1 ==1 && roll2 == 2){
+            snakeEyes +=1;
+            
+            
+         } 
+         
 
       }
 

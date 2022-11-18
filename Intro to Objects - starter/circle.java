@@ -31,12 +31,13 @@ public class circle
     /**
     //Constructor
     */
-    public circle(double radius)
+    public circle(double r)
     {
-        this.radius = radius;
-       
+        //this.radius = radius;
+        radius = r;
         circumference = calcCircumference();
-        
+        diameter = getDiameter();
+        area = getArea();
 
     }
      /**

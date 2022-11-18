@@ -40,26 +40,27 @@ public class Die
            @return
    */
   
-   public Die(int numFaces){
+   public Die(int numOfFaces){
+       numFaces = numOfFaces;
        if (numFaces < MIN_FACES){
            numFaces = 4;
        }
-       Random rand = new Random();
-       faceValue = rand.nextInt(numFaces);
+       //Random rand = new Random();
+       roll();
    }
    
    public int roll ()
    {
-      Random rand = new Random();
+      //Random rand = new Random();
       //faceValue = 0; // you put the correct  code here
-      faceValue = rand.nextInt(numFaces)+1;
+      faceValue = generator.nextInt(numFaces)+1;
       
       return faceValue;
    }
 
    /**
            Returns the current die value.
-           @return _____________________write comment
+           @return face value
    */
    public int getFaceValue ()
    {
@@ -84,8 +85,8 @@ public class Die
           @param _________________
   */
 
-    public void setFaces(){
-        numFaces = getFaces();
+    public void setFaces(int numOfFaces){
+        numFaces = numOfFaces;
   
     }
 
