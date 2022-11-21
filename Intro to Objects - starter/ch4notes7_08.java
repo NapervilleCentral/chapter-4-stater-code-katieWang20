@@ -28,6 +28,9 @@ public class ch4notes7_08
        // double r = round.radius;
         
         System.out.println(round);
+        circle oval = new circle(5);
+        System.out.println(round.equals(oval));
+        
         
         //System.out.println(solver.abs(-5)); //obj.method()
         //System.out.println(solver.add(43, 10));
@@ -44,7 +47,26 @@ public class ch4notes7_08
         System.out.println(add(4, 3, 2));
      
     /**/
+        Address myAddress = new Address("440 W Auoura", "Naperville", "IL", 60540);
+        System.out.println(myAddress);
+        changeAddress(myAddress);
+        System.out.println(myAddress);
+    
     }// end of main
+    
+    /**
+     * changeAddress
+     * you moveed and need to change your address
+     * @param address of object
+     * 
+     */
+    public static void changeAddress(Address other){
+        //ask the user for a new address
+        String newStreet = "123 Elm st.";
+        other.setAddress(newStreet);        
+        
+    }
+    
     
     /**
         take the absoulute value of the number

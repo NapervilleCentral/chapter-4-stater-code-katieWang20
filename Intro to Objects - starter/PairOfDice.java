@@ -71,8 +71,14 @@ public class PairOfDice
             hint: use methods in die to build the String to return
             @return
     */
-
-
+    public String toString(){
+        String info = "";
+        info += "Face of die1 : " + getDie1();
+        
+        return info;
+    
+    }
+    
 
 
 }

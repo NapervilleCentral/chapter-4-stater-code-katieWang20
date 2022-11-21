@@ -55,13 +55,14 @@ public class circle
      * 
      */
     
-    private void calcDiameter(){
+    public void calcDiameter(){
         diameter = 2 * radius; 
         
           
     }
     
     public double getDiameter(){
+    
         return diameter;
     
     }
@@ -69,6 +70,32 @@ public class circle
     public double getArea(){
         return area = PI * radius * radius;
     
+    }
+    
+    /**
+     * copy Consutrctor info from other to this object 
+     * @param circle other
+     * 
+     */
+    
+    public circle(circle other){
+        //acess private data inside other circle
+        this.radius = other.radius;
+        this.circumference = other.circumference;
+        this.diameter = other.diameter;
+        this.area = other.area;
+        //compares my own object info with other object info
+    }
+    /**
+     * equals method = true if the radius is the sam as other obj
+     * param circle
+     * @return coolean
+     * 
+     */
+    public boolean equals (circle other){
+        
+        return this.radius == other.radius;
+        
     }
     
     
@@ -79,8 +106,8 @@ public class circle
     
     
     public String toString(){
-        String data = "Radius:  "+radius;
-        data+="\nCircumference: "+ circumference;
+        String data = "Radius:  "+ radius;
+        data +="\nCircumference: "+ circumference;
         data +="\nDiameter      "+ diameter;
         data +="\nArea          "+ area;
         return data;

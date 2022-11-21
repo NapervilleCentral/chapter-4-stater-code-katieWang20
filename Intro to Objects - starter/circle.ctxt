@@ -16,7 +16,13 @@ comment5.params=
 comment5.target=double\ getDiameter()
 comment6.params=
 comment6.target=double\ getArea()
-comment7.params=
-comment7.target=java.lang.String\ toString()
-comment7.text=\r\n\ toString\ returns\ the\ private\ data\r\n\ @return\ String\r\n
-numComments=8
+comment7.params=other
+comment7.target=circle(circle)
+comment7.text=\r\n\ copy\ Consutrctor\ info\ from\ other\ to\ this\ object\ \r\n\ @param\ circle\ other\r\n\ \r\n
+comment8.params=other
+comment8.target=boolean\ equals(circle)
+comment8.text=\r\n\ equals\ method\ \=\ true\ if\ the\ radius\ is\ the\ sam\ as\ other\ obj\r\n\ param\ circle\r\n\ @return\ coolean\r\n\ \r\n
+comment9.params=
+comment9.target=java.lang.String\ toString()
+comment9.text=\r\n\ toString\ returns\ the\ private\ data\r\n\ @return\ String\r\n
+numComments=10

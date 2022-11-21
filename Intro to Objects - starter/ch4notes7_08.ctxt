@@ -2,9 +2,12 @@
 comment0.target=ch4notes7_08
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-comment2.params=x
-comment2.target=double\ abs(double)
-comment2.text=\r\n\ \ \ \ \ \ \ \ take\ the\ absoulute\ value\ of\ the\ number\r\n\ \ \ \ \ \ \ \ @param\ int\ value\r\n\ \ \ \ \ \ \ \ @return\ absoulute\ value\ of\ number\r\n
+comment2.params=other
+comment2.target=void\ changeAddress(Address)
+comment2.text=\r\n\ changeAddress\r\n\ you\ moveed\ and\ need\ to\ change\ your\ address\r\n\ @param\ address\ of\ object\r\n\ \r\n
 comment3.params=x
-comment3.target=int\ abs(int)
-numComments=4
+comment3.target=double\ abs(double)
+comment3.text=\r\n\ \ \ \ \ \ \ \ take\ the\ absoulute\ value\ of\ the\ number\r\n\ \ \ \ \ \ \ \ @param\ int\ value\r\n\ \ \ \ \ \ \ \ @return\ absoulute\ value\ of\ number\r\n
+comment4.params=x
+comment4.target=int\ abs(int)
+numComments=5
