@@ -18,18 +18,18 @@ public class RationalNumbers
       System.out.println ("Second rational number: " + r2);
 
         //are the rational numbers equal?
-      if (true)
+      if (r1.equals(r2)==true)
          System.out.println ("r1 and r2 are equal.");
       else
          System.out.println ("r1 and r2 are NOT equal.");
 
-      r3 = //reciprocal of r1
+      r3 = r1.reciprocal();//reciprocal of r1
       System.out.println ("The reciprocal of r1 is: " + r3);
 
       r4 = r1.add(r2);//add r1 & r2
-      r5 = //subtract r1 & r2
-      r6 = //multiply r1 & r2
-      r7 = //divide r1 & r2;
+      r5 = r1.subtract(r2); //subtract r1 & r2
+      r6 = r1.multiply(r2);//multiply r1 & r2
+      r7 = r1.divide(r2);//divide r1 & r2;
 
       System.out.println (r1 + " + " + r2 + " = " + r4);
       System.out.println (r1 + " - " + r2 + " = " + r5);
