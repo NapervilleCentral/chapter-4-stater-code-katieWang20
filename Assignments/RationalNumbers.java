@@ -12,13 +12,13 @@ public class RationalNumbers
       Rational r1 = new Rational (6, 8);
       Rational r2 = new Rational (1, 3);
       Rational r3, r4, r5, r6, r7;
-
+      Rational r11 = new Rational(6, 8);
         //use toString to print
       System.out.println ("First rational number: " + r1);
       System.out.println ("Second rational number: " + r2);
-
+      
         //are the rational numbers equal?
-      if (r1.equals(r2)==true)
+      if (r1.equals(r11)==true)
          System.out.println ("r1 and r2 are equal.");
       else
          System.out.println ("r1 and r2 are NOT equal.");

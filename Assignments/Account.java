@@ -6,6 +6,7 @@
 //********************************************************************
 
 import java.text.NumberFormat;
+import java.util.Scanner;
 
 
 public class Account
@@ -22,13 +23,20 @@ public class Account
    * Sets up the account by defining its owner, account number,
    *  and initial balance.
    */
+  
    public Account (String owner, int account, double initial)
    {
       name = owner;
       acctNumber = account;
       balance = initial;
    }
-
+    
+   public Account (String owner, int account){
+        name = owner;
+        acctNumber = account;
+        balance = 0;
+    
+    }
    /**
    *  Validates the transaction, then deposits the specified amount
    *  into the account. Returns the new balance.
@@ -53,7 +61,7 @@ public class Account
    public double withdraw (double amount, double fee)
    {
       amount += fee;
-
+        
       if (amount < 0)  // withdraw value is negative
       {
          System.out.println ();
@@ -80,11 +88,18 @@ public class Account
    *  Asks the user for amount to transfer
    *  from one account to another.
    */
-   public void transfer (/*object*/)
+   public void transfer (Account other)
    {
-	   System.out.print("Enter amount to transfer");
-		double trans = 0; //aScannerObject.nextDouble();
-
+       Scanner input = new Scanner(System.in);
+       System.out.print("Enter amount to transfer");
+        double trans = input.nextDouble(); //aScannerObject.nextDouble();
+        if (trans > balance){
+            System.out.println("Not enough moeny");
+        }else{
+            balance = balance - trans;
+        
+            other.balance = other.balance + trans;
+        }
    }
 
    /**
@@ -99,12 +114,18 @@ public class Account
    /**
    *  Returns the current balance of the account.
    */
-
+   public double getBalance(){
+       
+       return balance;
+   }
 
    /**
    *  Returns the account number.
    */
-
+   public double getAccountNumber(){
+         return acctNumber;   
+    
+    }
 
    /**
    *  Returns a one-line description of the account as a string.
