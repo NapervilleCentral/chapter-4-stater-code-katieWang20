@@ -91,10 +91,10 @@ public class Account
    public void transfer (Account other)
    {
        Scanner input = new Scanner(System.in);
-       System.out.print("Enter amount to transfer");
+       System.out.print("Enter amount to transfer: ");
         double trans = input.nextDouble(); //aScannerObject.nextDouble();
         if (trans > balance){
-            System.out.println("Not enough moeny");
+            System.out.println("Not enough money to transfer.");
         }else{
             balance = balance - trans;
         

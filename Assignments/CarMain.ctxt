@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=CarMain
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ CarMain\ here.\r\n\ \r\n\ @author\ (your\ name)\r\n\ fuel\ tank\ level\ is\ a\ percentage\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=mine
+comment2.target=void\ getterTest(Car)
+comment3.params=mine
+comment3.target=void\ isFuelTankEmptyTests(Car)
+comment3.text=\r\n\ Takes\ a\ car\ and\ adds\ given\ miles\r\n\ @param\ \r\n
+numComments=4
