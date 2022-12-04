@@ -6,13 +6,15 @@
  * fuel tank level is a percentage
  * @version (a version number or a date)
  */
+
+
 public class CarMain
 {   public static int GOAL = 100;
     public static void main (String[] args)
    {
        int count1=0, count2=0;
        
-       Car aCar = new Car(1920, "Camry", 34, 20.1);
+       Car aCar = new Car(1920, "Camry", 34, 100);
        
        System.out.println(aCar.getYear());
        getterTest(aCar);
@@ -24,6 +26,13 @@ public class CarMain
         * run loop until one of the Cars drive 100 miles and print out
         * which car "won"
         */
+       
+       addMilesTest(aCar, 10);
+       System.out.println(aCar.getFuelTankLevel());
+       System.out.printf("miles to fuel level ratio: %.2f \n", aCar.milesToFuelLevel(400));
+ 
+       System.out.printf("Fuel tank level: %.2f\n", aCar.getFuelTankLevel());
+       System.out.printf("Fuel tank level after change: %.2f", aCar.modifyFuelTankLevel(10));
        /*
        while (count1 < GOAL && count2 < GOAL)
       {
@@ -46,7 +55,7 @@ public class CarMain
        System.out.println("Year of car: " + mine.getYear());
        System.out.println("Model of car: " + mine.getModel());
        System.out.println("Miles of car: " + mine.getMiles());
-       System.out.println("Fuel tank level of car: " + mine.getFuelTank());
+       System.out.println("Fuel tank level of car: " + mine.getFuelTankLevel());
        
    }
    
@@ -56,7 +65,9 @@ public class CarMain
     */
    public static void addMilesTest(Car mine, int miles)
    {
-       mine.miles = mine.miles + miles;
+       
+       System.out.println(mine.addMiles(miles));
+       System.out.println(mine.addMiles(miles));
        
    }
    
