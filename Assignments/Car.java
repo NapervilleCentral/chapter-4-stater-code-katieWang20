@@ -23,7 +23,7 @@ public class Car
         this.year = year;
         this.model = model;
         this.miles = miles;
-        this.fuelTankLevel = fuelTankLevel; ///400 * 100;
+        this.fuelTankLevel = fuelTankLevel; 
         // initialise instance variables
         
     }
@@ -71,7 +71,6 @@ public class Car
      * returns ratio between miles and fuel tank capacity as a percentage
      */
     public double milesToFuelLevel(int miles){
-         //make miles double or it returns 0 because ints are just so much more important than doubles I guess
         double convert =100/400* (double)miles; 
  
         
@@ -86,18 +85,12 @@ public class Car
         double miles1 = (double) miles;
         fuelTankLevel = fuelTankLevel - miles1/400 *100;
         if (getFuelTankLevel() <= 0){
-            //System.out.println("Fuel tank level is at 0, you cannot change it");
             fuelTankLevel = 0;
             return fuelTankLevel;
         
         }else{
             return fuelTankLevel;
-            //if (fuelTankLevel > 0){
-              //  return fuelTankLevel;
-            //}else{
-              //  fuelTankLevel = 0;
-                //return fuelTankLevel;
-            //}
+          
         }
         
         
@@ -114,10 +107,10 @@ public class Car
     }
     
     public String drive(int miles){
-        //String result;
+       
         
         modifyFuelTankLevel(miles);
-        //System.out.println(fuelTankLevel);   
+          
         if (!isFuelTankEmpty()){
             this.miles = this.miles + miles;
             return "The " + model + " drove " + miles + " for a total mileage of " + this.miles +" and a fuel tank level of " +  getFuelTankLevel() + "%";
@@ -129,7 +122,7 @@ public class Car
     }
     
     public String drive(){
-        //Math rand = new Math();
+     
         
         Random random = new Random();
         double rand = random.nextInt(10);

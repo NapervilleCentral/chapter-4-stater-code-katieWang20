@@ -17,7 +17,7 @@ public class CarMain
        Car aCar = new Car(1920, "Camry", 34, 50);
        Car car2 = new Car(1980, "Volvo", 20, 14);
        //System.out.println(aCar.getYear());
-       /*
+       
        getterTest(aCar);
        getterTest(car2);
        System.out.println();
@@ -49,7 +49,7 @@ public class CarMain
          System.out.println(aCar.drive());
          System.out.println(car2.drive(5));
          System.out.println();
-         //System.out.println(car2.getFuelTankLevel());
+        
          // Print the drive results (uses Coin's toString method)
          System.out.print ("Car 1: " + aCar + "\n");
          System.out.println ("Car 2: " + car2);
