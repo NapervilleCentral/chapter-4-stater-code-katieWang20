@@ -1,4 +1,9 @@
-
+/**
+ * Katie Wang
+ * 10/4/2022
+ * Add, subtract, multiply, and divide fractions
+ * 
+ */
 
 public class RationalNumbers
 {

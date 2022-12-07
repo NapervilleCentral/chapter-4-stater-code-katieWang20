@@ -1,10 +1,9 @@
 
 /**
- * Write a description of class CarMain here.
- * 
- * @author (your name)
- * fuel tank level is a percentage
- * @version (a version number or a date)
+ * Katie Wang
+ * 12/4/2022
+ * gets details of car
+ * uses Car main
  */
 
 
