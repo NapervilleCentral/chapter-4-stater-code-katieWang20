@@ -161,6 +161,6 @@ public class Account
    */
    public String toString ()
    {
-      return "Name: " + name +"\nNumber: " + acctNumber + "\nbalance: " + fmt.format(balance);
+      return "Name: " + name +"\nNumber: " + acctNumber + "\nbalance: " + fmt.format(getBalance());
    }
 }

@@ -4,6 +4,7 @@
 //  Driver to exercise the use of multiple Account objects.
 //********************************************************************
 import java.util.Scanner;
+import java.text.NumberFormat;
 
 public class Banking
 {
@@ -16,6 +17,8 @@ public class Banking
       Account acct2 = new Account ("Anita Gomez", 69713, 40.00);
       Account acct3 = new Account ("Sanchit Reddy", 93757, 759.32);
       Account acct4 = null;
+      NumberFormat fmt = NumberFormat.getCurrencyInstance();
+      
       Scanner input = new Scanner(System.in);
       
       System.out.println();
@@ -44,7 +47,7 @@ public class Banking
                           acct2.withdraw (430.75, 1.50));
         
       acct3.withdraw (800.00, 0.0);  // exceeds balance
-      System.out.println("Ted's's balance before transfer from Sanchit: $" + acct1.getBalance());
+      System.out.println("Ted's's balance before transfer from Sanchit: " + fmt.format(acct1.getBalance()));
       acct3.transfer(acct1);
       
       System.out.println();
@@ -52,6 +55,8 @@ public class Banking
       System.out.println("Ted's balance after transfer from Sanchit: " + acct1.getBalance());
       
       acct1.addInterest();
+      System.out.print("Ted's balance after interest: " + fmt.format(acct1.getBalance()));
+      System.out.println();
       acct2.addInterest();
       acct3.addInterest();
       
