@@ -30,7 +30,10 @@ public class Account
       acctNumber = account;
       balance = initial;
    }
-    
+    /**
+     * Sets up initial account with just owner name and account number
+     * 
+     */
    public Account (String owner, int account){
         name = owner;
         acctNumber = account;
@@ -53,6 +56,27 @@ public class Account
          balance = balance + amount;
       return balance;
    }
+   /**
+    * 
+    * lets user deposit by asking for input
+    */
+   public double deposit ()
+
+   {
+       Scanner input = new Scanner(System.in);
+       System.out.println("Enter amount to deposit: ");
+       double amount = input.nextDouble();
+      if (amount < 0)  // deposit value is negative
+      {
+         System.out.println ();
+         System.out.println ("Error: Deposit amount is invalid.");
+         System.out.println (acctNumber + "  " + fmt.format(amount));
+      }
+      else
+         balance = balance + amount;
+      return balance;
+   }
+   
 
    /**
    *  Validates the transaction, then withdraws the specified amount
@@ -126,12 +150,17 @@ public class Account
          return acctNumber;   
     
     }
-
+    
+    public String getName(){
+        return name;
+    
+    }
+   
    /**
    *  Returns a one-line description of the account as a string.
    */
    public String toString ()
    {
-      return ("supply correct data");
+      return "Name: " + name +"\nNumber: " + acctNumber + "\nbalance: " + fmt.format(balance);
    }
 }

@@ -66,7 +66,7 @@ public class Rational
         int augend2 = op2.getNumerator() * this.getDenominator();
         int commonDenominator = this.getDenominator() * op2.getDenominator();
         int numeratorSum = augend1 + augend2;
-        
+        reduce();
         return new Rational(numeratorSum, commonDenominator);
    }
 
@@ -81,7 +81,7 @@ public class Rational
         int commonDenominator = this.getDenominator() * op2.getDenominator();
         
         int difference = minuend - subtrahend;
-        
+        reduce();
         return new Rational (difference, commonDenominator);
         
         
@@ -95,25 +95,23 @@ public class Rational
    {
         int numeratorProduct = this.getNumerator() * op2.getNumerator();
         int denominatorProduct = this.getDenominator() * op2.getDenominator();
-        
+        reduce();
         return new Rational (numeratorProduct, denominatorProduct);
    }
 
    /**----------------------------------------------------------------
    *  Divides this rational number by the one passed as a parameter
    *  by multiplying by the reciprocal of the second rational.
-   *  Do the thing where u multiply the numerator of the first equation with the flipped denominator of the second fraction
+   *  Do the thing where you multiply the numerator of the first equation with the flipped denominator of the second fraction
    *  and then multipley this.denmomoinator with op numerator
-   *  I hope that makes sense., Jusyt remember how dividing fractions works ok 
-   *  im so tired and gassss
-   *  a mirmir
+   *  
    *  :((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
    */
    public Rational divide (Rational op2)
    {
        int numeratorResult = this.getNumerator() * op2.getDenominator();
        int denominatorResult = this.getDenominator() * op2.getNumerator();
-       
+       reduce();
        return new Rational (numeratorResult, denominatorResult);
    }
 
